@@ -21,6 +21,9 @@ Este desafío tiene como objetivo plasmar tus habilidades como desarrollador fro
 ## Extras
 - Agregar a favoritos
 
+## Proyecto deployado
+<a href="https://challenge-pokedex-xi.vercel.app/" target="_blank">Página web - Deploy</a>
+
 ---------------------------------------
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
