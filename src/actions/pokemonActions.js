@@ -11,7 +11,6 @@ import {
   ESCAPE_SELECTED,
   ESCAPE_TO_FAVORITE,
   API_URl,
-  API_URl_ALL,
 } from "../constants";
 import { get, getDetails } from "../services/apiService";
 
@@ -128,21 +127,13 @@ export const deleteAllPokemonSelected = (removeSelected) => (dispatch) => {
   });
 };
 
-export const searchResultsByName = (keywords) => async (dispatch) => {
+export const searchResultsByName = (keywords) => async (dispatch, getState) => {
   dispatch({ type: LOADING, payload: true });
-  const arrayData = [];
+  const allPokemon = getState().pokemon.array;
   const key = keywords.toLowerCase();
 
   try {
-    const { data } = await get(API_URl_ALL);
-
-    if (data) {
-      for (let pokeData of data.results) {
-        const { data } = await getDetails(pokeData.url);
-        arrayData.push(data);
-      }
-    }
-    const filterPokemonByName = arrayData.filter((poke) => {
+    const filterPokemonByName = allPokemon.filter((poke) => {
       return poke.name.toLowerCase().includes(key);
     });
 
