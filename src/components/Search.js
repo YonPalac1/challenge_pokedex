@@ -24,7 +24,7 @@ const Search = ({ type }) => {
     if (keywords !== "") {
       if (type === "Buscar por nombre") {
         dispatch(searchResultsByName(keywords));
-      } else if (type === "Buscar por habilidades") {
+      } else if (type === "Buscar por habilidades (separar por espacio)") {
         dispatch(searchResultsByAbilities(keywords));
       }
       reset();

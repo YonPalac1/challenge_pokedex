@@ -149,7 +149,7 @@ export const searchResultsByAbilities =
     const key = keywords.toLowerCase().split(" ");
     const allPokemon = getState().pokemon.array;
     const newArray = [];
-
+    
     for (let poke of allPokemon) {
       for (let item of poke.abilities) {
         for (let arr of key) {
