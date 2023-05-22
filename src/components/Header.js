@@ -19,7 +19,7 @@ export const Header = () => {
     setAbility(!ability)
     
     if(!name) setPlaceholder("Buscar por nombre")
-    if(!ability) setPlaceholder("Buscar por habilidades")
+    if(!ability) setPlaceholder("Buscar por habilidades (separar por espacio)")
   }
 
   return (
