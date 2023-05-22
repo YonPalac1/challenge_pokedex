@@ -159,8 +159,7 @@ export const searchResultsByAbilities =
         }
       }
     }
-    console.log(newArray)
-
+    
     dispatch({
       type: SEARCH_RESULT,
       payload: newArray,
