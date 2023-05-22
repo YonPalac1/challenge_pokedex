@@ -146,17 +146,20 @@ export const searchResultsByName = (keywords) => async (dispatch, getState) => {
 
 export const searchResultsByAbilities =
   (keywords) => async (dispatch, getState) => {
-    const key = keywords.toLowerCase();
+    const key = keywords.toLowerCase().split(" ");
     const allPokemon = getState().pokemon.array;
     const newArray = [];
 
     for (let poke of allPokemon) {
       for (let item of poke.abilities) {
-        if (item.ability.name.toLowerCase().includes(key)) {
-          newArray.push(poke);
+        for (let arr of key) {
+          if (item.ability.name.toLowerCase().includes(arr)) {
+            newArray.push(poke);
+          }
         }
       }
     }
+    console.log(newArray)
 
     dispatch({
       type: SEARCH_RESULT,
