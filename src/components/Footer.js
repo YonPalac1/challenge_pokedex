@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Footer = () => {
   return (
     <Foot>
-      <a className="text-center" href="" target="_blank">
+      <a className="text-center" href="https://github.com/YonPalac1" target="_blank">
         Challenge 2023 | by Jonatan Palacios
       </a>
     </Foot>
