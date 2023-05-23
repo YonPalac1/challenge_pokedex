@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import SearchIcon from "@mui/icons-material/Search";
-import 'animate.css';
+import "animate.css";
 
 import {
   searchResultsByName,
@@ -56,7 +56,6 @@ export default Search;
 const SearchBar = styled.div`
   display: flex;
   justify-content: center;
-  width: 550px;
   margin: 30px auto 0;
 `;
 const Input = styled.input`
@@ -67,7 +66,7 @@ const Input = styled.input`
   color: #fff;
   font-size: 15px;
   border-right-style: none;
-  width: 350px;
+  width: 250px;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 0.5rem #4993b6,
     0 0 0.8rem #37abe1;
 `;

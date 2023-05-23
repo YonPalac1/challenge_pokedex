@@ -32,7 +32,7 @@ const Fragment = styled.div`
 
 const ContainerCard = styled.div`
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   padding: 10px;
   margin: 0 auto;
   justify-content: center;
